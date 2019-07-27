@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddContactActivity">
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        android:id="@+id/add_contact_progressbar"
+        android:visibility="visible"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/add_contact_profile_image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="25dp"
+        app:civ_border_width="4dp"
+        app:civ_border_color="#949494"
+        android:src="@drawable/ic_img_place_holder"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageView
+        android:id="@+id/add_contact_new_profile_image"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_below="@id/add_contact_profile_image"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_add_profile_image" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/add_contact_new_profile_image"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:id="@+id/name_container">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_person"
+            android:layout_margin="10dp"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/add_contact_name_edittext"
+            android:hint="Name"
+            android:inputType="textPersonName"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name_container"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:id="@+id/phone_container"
+        >
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_call"
+            android:layout_margin="10dp"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/add_contact_phone_edittext"
+            android:inputType="phone"
+            android:hint="Phone"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_contact_spinner"
+        android:layout_marginLeft="60dp"
+        android:layout_below="@id/phone_container"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/add_contact_spinner"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_email"
+            android:layout_margin="10dp"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/add_contact_email_edittext"
+            android:hint="EMail"
+            android:inputType="textEmailAddress"
+            android:textSize="18sp"/>
+    </LinearLayout>
+    
+</RelativeLayout>

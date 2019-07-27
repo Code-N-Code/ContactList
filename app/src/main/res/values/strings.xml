@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Contact List</string>
+    <string-array name="spinner_content">
+        <item>Mobile</item>
+        <item>Office</item>
+        <item>Home</item>
+    </string-array>
+</resources>
